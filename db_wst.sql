@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Feb 2022 pada 16.44
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 7.4.27
+-- Generation Time: Feb 28, 2022 at 06:46 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `psn`
+-- Table structure for table `psn`
 --
 
 CREATE TABLE `psn` (
@@ -41,7 +41,7 @@ CREATE TABLE `psn` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wsta`
+-- Table structure for table `wsta`
 --
 
 CREATE TABLE `wsta` (
@@ -51,43 +51,43 @@ CREATE TABLE `wsta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `wsta`
+-- Dumping data for table `wsta`
 --
 
 INSERT INTO `wsta` (`id`, `tmpt`, `hrg`) VALUES
-(1, 'Taman Safari - Bogor', '200.000'),
-(2, 'Taman Matahari - Bogor', '150.000'),
-(3, 'Kebun Raya - Bogor', '50.000'),
-(4, 'The Jungle - Bogor', '100.000');
+(1, 'Taman Safari Bogor', '200000'),
+(2, 'Taman Matahari Bogor', '150000'),
+(3, 'Kebun Raya Bogor', '50000'),
+(4, 'The Jungle Bogor', '100000');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `psn`
+-- Indexes for table `psn`
 --
 ALTER TABLE `psn`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `wsta`
+-- Indexes for table `wsta`
 --
 ALTER TABLE `wsta`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `psn`
+-- AUTO_INCREMENT for table `psn`
 --
 ALTER TABLE `psn`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `wsta`
+-- AUTO_INCREMENT for table `wsta`
 --
 ALTER TABLE `wsta`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;

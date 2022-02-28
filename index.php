@@ -5,17 +5,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<title>Daftar Harga Tiket</title>
+	<!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
+	<!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">Wisata Kota Bogor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Daftar Harga Tiket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pesan.php">Pesan Tiket</a></li>
+                </ul>
+                <!-- <form class="d-flex">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Cart
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
 <!-- Tampil semua data barang dari database-->
 <div class="container col-md-8 mt-4">
         <h1>Daftar Harga Tiket</h1>
         <div class="card">
-            <div class="card-header bg-dark text-white ">
+            <!-- <div class="card-header bg-white text-white "> -->
 			<div class="card-body">
-                <table class="table table-bordered table-dark">
+                <table class="table table-bordered table-dark"><br>
 			<th>No</th>
 			<th>Tempat Wisata</th>
 			<th>Harga</th>
@@ -37,77 +70,6 @@
 		}
 		?>
 	</table>
-<!-- Pilih data barang dengan combo box-->
-<hr>
-	<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="get">
-		<table>
-			<tr>
-				<td><h4>Pilih Tempat Wisata</h4></td>
-				<td>:</td>
-				<td>
-					<select name="id">
-						<option value="" selected="selected">-</option>
-						<?php						
-						//perintah sql untuk menampilkan semua data pada table barang
-						$sql = "select id,tmpt from wsta";
-						$hasil = mysqli_query($kon,$sql);						
-						while ($data = mysqli_fetch_array($hasil)) {						
-							$ket="";
-							if (isset($_GET['id'])){
-								$id = trim($_GET['id']);
-
-								if($id==$data['id'])
-								{
-									$ket="selected";
-								}
-							}
-							?>
-							<option <?php echo $ket;?> 
-							value="<?php echo $data['id']?>">
-							<?php echo $data['id'];?> - <?php echo $data['tmpt'];?>
-							</option>
-							<?php
-						}
-						?>
-					</select>
-				</td>
-				<td>
-					<input type="submit" name="submit" value="Pilih">
-				</td>
-			</tr>
-		</table>
-	</form>
-
-	<h2>Detail Data Barang</h2>
-	<?php
-	if (isset($_GET['id'])) {
-	 	$id = $_GET['id'];
-
-	 	$sql = "select * from wsta where id=$id";
-	 	$hasil = mysqli_query($kon,$sql);
-	 	$data = mysqli_fetch_assoc($hasil);
-	 } 
-	 ?>
-	 <table>
-	 	<tr>
-	 		<td>ID</td>
-	 		<td>:</td>
-	 		<td><input type="text" name="id" 
-	 			value="<?php echo $data['id'];?>"></td>
-	 	</tr>
-	 	<tr>
-	 		<td>Nama Barang</td>
-	 		<td>:</td>
-	 		<td><input type="text" name="tmpt" 
-	 			value="<?php echo $data['tmpt'];?>"></td>
-	 	</tr>
-	 	<tr>
-	 		<td>Harga</td>
-	 		<td>:</td>
-	 		<td><input type="text" name="hrg" 
-	 			value="<?php echo $data['hrg'];?>"></td>
-	 	</tr>		 	
-	 </table>
 
 	 <h4><a href="tmpln.php" style="text-decoration: none;"><-- Kembali</a></h4>	 
 </body>
