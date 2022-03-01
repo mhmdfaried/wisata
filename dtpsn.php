@@ -34,9 +34,9 @@ include "koneksi.php";
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link" href="tmpln.php">Home</a></li>
-                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link active" aria-current="page" href="index.php">Daftar Harga Tiket</a></li>
-                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link" href="pesan.php">Pesan Tiket</a></li>
-                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link" href="dtpsn.php">Data Pengunjung</a></li>
+                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link" href="index.php">Daftar Harga Tiket</a></li>
+                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link" href="tmbh.php">Pesan Tiket</a></li>
+                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link active" aria-current="page" href="dtpsn.php">Data Pengunjung</a></li>
                 </ul>
                 <!-- <form class="d-flex">
                     <button class="btn btn-outline-dark" type="submit">
@@ -49,11 +49,11 @@ include "koneksi.php";
         </div>
     </nav>
     <!-- Tampil semua data barang dari database-->
-    <div class="container col-md-6 mt-4">
+    <div class="container col-md-16 mt-4">
 
         <br>
         <br>
-        <h1 style="font-family:Roboto Slab ;">Daftar Harga Tiket</h1>
+        <h1 style="font-family:Roboto Slab ;">Daftar Pengunjung</h1>
         <div class="card">
             <div class="card-header bg-dark text-white">
             </div>
@@ -63,21 +63,39 @@ include "koneksi.php";
                 <div style="font-family:Roboto Slab ;" class="card-body">
                     <table class="table table-bordered table-dark"><br>
                         <th>No</th>
+                        <th>Nama Lengkap</th>
+                        <th>Nomor Identitas</th>
+                        <th>No. HP</th>
                         <th>Tempat Wisata</th>
-                        <th>Harga</th>
+                        <th>Tanggal Kunjungan</th>
+                        <th>Jumlah Pengunjung</th>
+                        <th>Pengunjung Anak-Anak</th>
+                        <!-- <th>Harga Tiket</th>
+                        <th>Total</th>
+                        <th>Potongan Harga</th>
+                        <th>Total Bayar</th> -->
                         </tr>
                         <?php
                         $no = 1;
                         //Query menampilkan semua data dari tabel barang
-                        $sql = "select * from wsta";
+                        $sql = "select * from psn";
                         $hasil = mysqli_query($kon, $sql);
                         while ($data = mysqli_fetch_array($hasil)) {
                         ?>
                             <tr>
                                 <!--Tampil data berupa array -->
                                 <td><?php echo $no++; ?></td>
-                                <td><?php echo $data['tmpt']; ?></td>
-                                <td>Rp. <?php echo $data['hrg']; ?></td>
+                                <td><?php echo $data['nl']; ?></td>
+                                <td><?php echo $data['ni']; ?></td>
+                                <td><?php echo $data['nh']; ?></td>
+                                <td><?php echo $data['tw']; ?></td>
+                                <td><?php echo $data['tk']; ?></td>
+                                <td><?php echo $data['jp']; ?> Orang</td>
+                                <td><?php echo $data['pa']; ?> Orang</td>
+                                <!-- <td><?php echo $data['hrg']; ?></td> -->
+                                <!-- <td><?php echo $data['th']; ?></td> -->
+                                <!-- <td><?php echo $data['potongan']; ?></td> -->
+                                <!-- <td>Rp. <?php echo $data['tb']; ?></td> -->
                             </tr>
                         <?php
                         }
@@ -85,9 +103,9 @@ include "koneksi.php";
                     </table>
                     <br>
 
-                    <h4><a class=" btn btn-primary" href="tmpln.php" style="text-decoration: none;">
+                    <!-- <h4><a class=" btn btn-primary" href="tmpln.php" style="text-decoration: none;">
                             <-- Kembali</a>
-                    </h4>
+                    </h4> -->
 </body>
 
 </html>

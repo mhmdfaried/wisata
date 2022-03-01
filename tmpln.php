@@ -14,21 +14,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Wisata Kota Bogor</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <a style="font-family:Roboto Slab ;" class="navbar-brand" href="#!">Wisata Kota Bogor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="tmpln.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php">Daftar Harga Tiket</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pesan.php">Pesan Tiket</a></li>
+                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link active" aria-current="page" href="tmpln.php">Home</a></li>
+                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link" href="index.php">Daftar Harga Tiket</a></li>
+                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link" href="tmbh.php">Pesan Tiket</a></li>
+                    <li class="nav-item"><a style="font-family:Roboto Slab ;" class="nav-link" href="dtpsn.php">Data Pengunjung</a></li>
                 </ul>
                 <!-- <form class="d-flex">
                     <button class="btn btn-outline-dark" type="submit">
@@ -44,8 +48,8 @@
     <header class="bg-dark py-5 opacity-50 img='img/latar.png' ">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">Selamat Datang</h1>
-                <p class="lead fw-normal text-white-50 mb-0">Silahkan Berwisata</p>
+                <h1 style="font-family:Roboto Slab ;" class="display-4 fw-bolder">Selamat Datang</h1>
+                <p style="font-family:Roboto Slab ;" class="lead fw-normal text-white-50 mb-0">Silahkan Berwisata</p>
             </div>
         </div>
     </header>
@@ -54,18 +58,16 @@
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
-                    <div class="card h-90">
+                    <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top"
-                            src="img/safari.png"
-                            alt="..." />
+                        <img class="card-img-top" src="img/safari.png" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name--><br>
-                                <h5 class="fw-bolder">Taman Safari Bogor</h5>
+                                <h5 style="font-family:Roboto Condensed ;" class="fw-bolder">Taman Safari Bogor</h5>
                                 <!-- Product price--><br>
-                                Rp. 200.000
+                                Jl. Kapten Harun Kabir No.724, Cibeureum, Kec. Cisarua, Kabupaten Bogor, Jawa Barat 16750
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -76,19 +78,17 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-90">
+                    <div class="card h-100">
                         <!-- Sale badge-->
                         <!-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
                         </div> -->
                         <!-- Product image-->
-                        <img class="card-img-top"
-                            src="img/matahari.png"
-                            alt="..." />
+                        <img class="card-img-top" src="img/matahari.png" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name--><br>
-                                <h5 class="fw-bolder">Taman Matahari Bogor</h5>
+                                <h5 style="font-family:Roboto Condensed ;" class="fw-bolder">Taman Matahari Bogor</h5>
                                 <!-- Product reviews-->
                                 <!-- <div class="d-flex justify-content-center small text-warning mb-2">
                                     <div class="bi-star-fill"></div>
@@ -98,7 +98,7 @@
                                     <div class="bi-star-fill"></div>
                                 </div> -->
                                 <!-- Product price--><br>
-                                Rp. 150.000
+                                Jl. Jogjogan No.60, Jogjogan, Kec. Cisarua, Kabupaten Bogor, Jawa Barat 16750
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -109,21 +109,19 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-90">
+                    <div class="card h-100">
                         <!-- Sale badge-->
                         <!-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
                         </div> -->
                         <!-- Product image-->
-                        <img class="card-img-top"
-                            src="img/krb.png"
-                            alt="..." />
+                        <img class="card-img-top" src="img/krb.png" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name--><br>
-                                <h5 class="fw-bolder">Kebun Raya Bogor</h5>
+                                <h5 style="font-family:Roboto Condensed ;" class="fw-bolder">Kebun Raya Bogor</h5>
                                 <!-- Product price--><br>
-                                Rp. 50.000
+                                Jl. Ir. H. Juanda No.13, Paledang, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16122
                                 <!-- <span class="text-muted text-decoration-line-through">$50.00</span>
                                 $25.00 -->
                             </div>
@@ -136,16 +134,14 @@
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-90">
+                    <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top"
-                            src="img/jungle.png"
-                            alt="..." />
+                        <img class="card-img-top" src="img/jungle.png" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name--><br>
-                                <h5 class="fw-bolder">The Jungle Bogor</h5>
+                                <h5 style="font-family:Roboto Condensed ;" class="fw-bolder">The Jungle Bogor</h5>
                                 <!-- Product reviews-->
                                 <!-- <div class="d-flex justify-content-center small text-warning mb-2">
                                     <div class="bi-star-fill"></div>
@@ -155,7 +151,7 @@
                                     <div class="bi-star-fill"></div>
                                 </div> -->
                                 <!-- Product price--><br>
-                                Rp. 100.000
+                                Jl. Bogor Nirwana Boulevard, Perumahan Bogor Nirwana Residence, Mulyaharja, Bogor Selatan, RT.05/RW.12, Mulyaharja, Kec. Bogor Sel., Kota Bogor, Jawa Barat 16132
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -171,7 +167,7 @@
     <!-- Footer-->
     <footer class="py-2 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Ujikom LSP Muhamad Faried</p>
+            <p style="font-family:Roboto Slab ;" class="m-0 text-center text-white">Ujikom LSP Muhamad Faried</p>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
